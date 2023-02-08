@@ -10,7 +10,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState("");
-  const itemsPerPage = 3;
+  const itemsPerPage = 10;
   const lastPage = Math.ceil(items.length / itemsPerPage);
   const navigate = useNavigate();
   const handlePrevPage = () => {
@@ -88,8 +88,8 @@ const Home = () => {
           className="input input-bordered w-full max-w-xs"
         />
       </div>
-      <div className="flex justify-center mt-5">
-        <table className="table-auto w-full text-center">
+      <div className="container flex justify-center mt-5">
+        <table className="overflow-auto table-auto w-full h-60 text-center">
           <thead>
             <tr className="bg-gray-300">
               <th className="px-4 py-2">Name</th>
