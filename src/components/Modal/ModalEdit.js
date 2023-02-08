@@ -62,6 +62,7 @@ const ModalEdit = ({ onClose }) => {
   const postForm = (e) => {
     e.preventDefault();
     const formData = new FormData();
+    formData.append("name", items.name);
     formData.append("stock", inputData.stock);
     formData.append("sellprice", inputData.sellprice);
     formData.append("buyprice", inputData.buyprice);
