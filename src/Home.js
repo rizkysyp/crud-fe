@@ -79,7 +79,7 @@ const Home = () => {
     minimumFractionDigits: 2,
   });
   return (
-    <>
+    <div className="container mx-auto">
       <div className="justify-between flex mt-3">
         <input
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
@@ -88,8 +88,8 @@ const Home = () => {
           className="input input-bordered w-full max-w-xs"
         />
       </div>
-      <div className="container flex justify-center mt-5">
-        <table className="overflow-auto table-auto w-full h-60 text-center">
+      <div className="container h-96 flex overflow-auto overflow-x-scroll mt-5">
+        <table className="table-auto w-full text-center">
           <thead>
             <tr className="bg-gray-300">
               <th className="px-4 py-2">Name</th>
@@ -139,7 +139,7 @@ const Home = () => {
         </table>
       </div>
 
-      <div className="flex justify-between mt-5 ml-2">
+      <div className="container flex justify-between mt-5 ml-2">
         <div></div>
         <div>
           <button
@@ -172,7 +172,7 @@ const Home = () => {
       </div>
       {isModalAdd && <ModalAdd onClose={() => setModalAdd(false)} />}
       {isModalEdit && <ModalEdit onClose={() => setModalEdit(false)} />}
-    </>
+    </div>
   );
 };
 
